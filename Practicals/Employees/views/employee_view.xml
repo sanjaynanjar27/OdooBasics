@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record id="wb_employee_tree_view" model="ir.ui.view">
+            <field name="name">wb.employee.tree.view</field>
+            <field name="model">wb.employee</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_id"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="phone_number"/>
+                    <field name="salary"/>
+                    <field name="joining_year"/>
+                    <field name="technology_working_on"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wb_employee_form_view" model="ir.ui.view">
+            <field name="name">wb.employee.form.view</field>
+            <field name="model">wb.employee</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone_number"/>
+                            <field name="salary"/>
+                            <field name="joining_year"/>
+                            <field name="technology_working_on"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="wb_employee_action" model="ir.actions.act_window">
+            <field name="name">Employees</field>
+            <field name="res_model">wb.employee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="wb_employee_root_menu" name="Employees"/>
+        <menuitem id="wb_employee_sub_root_menu" name="Work From Office" parent="wb_employee_root_menu"/>
+        <menuitem id="wb_employee_menu" action="wb_employee_action" name="Employee List" parent="wb_employee_sub_root_menu"/>
+    </data>
+</odoo>
