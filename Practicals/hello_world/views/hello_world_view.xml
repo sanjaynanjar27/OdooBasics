@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="message_hello_world" model="hello_world">
+            <field name="text">Hello, World!</field>
+        </record>
+    </data>
+</odoo>
